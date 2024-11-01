@@ -1,0 +1,105 @@
+/* Estilos principales de la calculadora */
+.calculadora {
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #e0f7fa, #b2ebf2); /* Fondo suave en tonos azules invernales */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    padding: 20px;
+    background: radial-gradient(circle at top left, #f7c6c7, #b22222); /* Gradiente de rojo navideño */
+    color: #333;
+}
+
+/* Estilos de los botones de la calculadora */
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: #e0f7fa; /* Texto blanco-azulado */
+    background-color: #1c2833; /* Fondo azul oscuro */
+    transition: background-color 0.3s, transform 0.15s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+}
+
+input[type="button"]:hover {
+    background-color: #34495e; /* Cambio a azul más claro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+input[type="button"]:active {
+    background-color: #2c3e50; /* Azul oscuro al presionar */
+    transform: scale(0.98);
+}
+
+/* Estilos para la pantalla de la calculadora */
+#pantalla {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px;
+    color: #34495e; /* Texto azul oscuro */
+    background-color: #eaf2f8; /* Fondo blanco hielo */
+    border: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del botón "Regresar" */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-regresar {
+    background-color: #1a5276; /* Azul invernal */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.15s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.button-regresar:hover {
+    background-color: #2980b9; /* Azul más claro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.button-regresar:active {
+    background-color: #154360; /* Azul profundo al presionar */
+    transform: scale(0.98);
+}
+
+/* Ajustes de tamaño para dispositivos móviles */
+@media (max-width: 600px) {
+    .calculadora {
+        width: 90%;
+    }
+    input[type="button"] {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    #pantalla {
+        font-size: 20px;
+        height: 40px;
+    }
+}
