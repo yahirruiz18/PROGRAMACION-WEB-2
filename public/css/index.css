@@ -1,0 +1,125 @@
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #f5f5f5;
+    --color-accent: #007bff; /* Azul para acciones */
+    --color-background: #eef2f7; /* Fondo azul claro */
+    --color-text: #333;
+    --color-border: #ddd;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --color-button: #ccc; /* Gris claro para botones */
+    --color-button-hover: #b3b3b3; /* Gris más oscuro para hover */
+    --color-text-button: #000; /* Negro para el texto de los botones */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 20px;
+}
+
+.centrar {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: var(--color-button);
+    color: var(--color-text-button);
+}
+
+button:hover {
+    opacity: 0.9;
+    background: var(--color-button-hover);
+}
+
+.agregar {
+    width: fit-content;
+    align-self: flex-end; /* Alinea el botón a la derecha */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-primary);
+    box-shadow: 0 2px 4px var(--shadow);
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+th {
+    background-color: var(--color-secondary);
+    font-weight: bold;
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.editar {
+    background: var(--color-button);
+    color: var(--color-text-button);
+}
+
+.eliminar {
+    background: var(--color-button);
+    color: var(--color-text-button);
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text);
+    opacity: 0.8;
+}

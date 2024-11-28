@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/edit.css">
+  <title>CRUD (Proyecto Final)</title>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div class="centrar">
+    <div>
+      <form action="/edit/<%= users.id%>" method="post">
+        <div class="formeditar">
+          <h2 style="text-align: center; margin-bottom: 20px;">Editar datos</h2> 
+          <br>
+          <div class="centrar">
+            <label for="name" style="width: 20%;">Nombre:</label>
+            <input type="text" id="name" name="name" required class="inputeditar" value="<%= users.name %>">
+          </div>
+          <br>
+          <div class="centrar">
+            <label for="email" style="width: 20%;">Correo:</label>
+            <input type="email" id="email" name="email" required class="inputeditar" value="<%= users.email %>">
+          </div>
+          <br>
+          <div class="centrar">
+            <label for="universidad" style="width: 20%;">Universidad:</label>
+            <input type="text" id="universidad" name="universidad" required class="inputeditar" value="<%= users.universidad %>">
+          </div>
+          <br>
+          <div class="centrar">
+            <label for="cuenta" style="width: 20%;">Cuenta:</label>
+              <input type="text" id="cuenta" name="cuenta" required class="inputeditar" value="<%= users.cuenta %>"
+              pattern="^\d{9}$" title="El campo Cuenta debe contener 9 digitos">
+          </div>
+          <br>
+
+          <div class="botones">
+            <button type="submit" class="editar">Actualizar datos</button>
+          <br>
+            <a href="/"><button type="button" class="eliminar">Cancelar</button></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/particulas.js"></script>
+
+</body>
+</html>
+

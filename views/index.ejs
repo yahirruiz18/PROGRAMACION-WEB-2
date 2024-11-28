@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>CRUD (Proyecto Final)</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="centrar">
+        <div>
+            <div class="borde">
+                <div class="header">
+                    <h1>Proyecto Final (CRUD)</h1> 
+                    <a href="/agregar"><button class="agregar">Agregar</button></a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="head">ID</th>
+                            <th class="head">Nombre</th>
+                            <th class="head">Correo</th>
+                            <th class="head">Universidad</th>
+                            <th class="head">Cuenta</th>
+                            <th class="head" style="text-align: center;">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(user => { %>
+                        <tr>
+                            <td class="body"><%= user.id %></td>
+                            <td class="body"><%= user.name %></td>
+                            <td class="body"><%= user.email %></td>
+                            <td class="body"><%= user.universidad %></td>
+                            <td class="body"><%= user.cuenta %></td>
+                            <td class="acciones">
+                                <a href="/edit/<%= user.id %>"><button class="editar">Editar</button></a> |
+                                <a href="/delete/<%= user.id %>"><button class="eliminar">Eliminar</button></a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/js/particles.min.js"></script>
+<script src="/js/particulas.js"></script>
+
+
+</html>
